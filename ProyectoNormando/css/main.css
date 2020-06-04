@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+    --letras: black;
+    --background-color: rgba(243, 241, 241, 0.9);
+    --fondoForm: rgba(238, 238, 238, 0.664);
+    --remarcar: #6383be;
+    --remarcarHover: #5e95fa;
+    color: var(--letras);
+    background-color: var(--background-color);
+    font-family: 'Inconsolata',
+        monospace;
+}
+
+#fondo {
+    background: var(--fondoForm) !important;
+}
+
+#encabezado {
+    background-color: var(--fondoForm) !important;
+}
+
+.table-striped {
+    color: var(--letras);
+}
+
+/*Personalización Modo Nocturno ↓ */
+
+.ModoNocturnoBase {
+    color: black;
+    background: black;
+    width: 60px;
+    height: 26px;
+    border-radius: 50px;
+    position: absolute;
+    top: 0.85em;
+    margin-left: 93%;
+    margin-top: 1%;
+    z-index: 1;
+}
+
+.ModoNocturnoCirculo {
+    background: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    transition: .5s all ease;
+}
+
+/*.
+    .ModoNocturnoActivar hace referencia a cuando se da click 
+    .ModoNocturnoBase hace referencia al fondo del boton
+    .ModoNocturnoCirculo hace referencua al circulo del boton
+*/
+
+.ModoNocturnoActivar .ModoNocturnoCirculo {
+    background: black;
+    transform: translateX(34px);
+}
+
+.ModoNocturnoActivar .ModoNocturnoBase {
+    background: white;
+}
+
+
+.ModoNocturnoActivar {
+    --letras: white;
+    --fondoForm: rgba(34, 34, 34, 0.404);
+    --background-color: rgba(0, 0, 0, 0.900);
+    --remarcar: #be639b;
+    --remarcarHover: #fc66c2;
+    --img: url("/ProyectoNormando/imagenes/LogoNegro.png");
+}
+
+.text-center>img {
+    width: 6em;
+    margin: 0;
+    content: var(--img);
+
+}
+
+.nav-item {
+    margin-left: 6em;
+}
+
+.nav-pills .nav-link.active {
+    color: #fff !important;
+    background-color: var(--remarcar);
+    width: max-content;
+}
+
+.nav-link {
+    width: max-content;
+    color: var(--remarcar) !important;
+
+}
+
+.btn-primary {
+    background-color: var(--remarcar);
+    border: none;
+    margin-top: 1.2em;
+}
+
+.btn-primary:hover {
+    background-color: var(--remarcarHover);
+}
+
+
+.text-center,
+.py-3 {
+    margin-bottom: -0.5em;
+}
+
+.p-5 {
+    border-radius: 1em;
+}
+
+input[name] {
+    border: none;
+    border-bottom: 1px solid var(--letras);
+    background: none;
+    color: var(--letras) !important;
+    z-index: 2;
+}
+
+input:focus,
+input.form-control:focus {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    background: none;
+}
+
+input[name]:focus+.LabelInput,
+input[name]:valid+.LabelInput {
+    margin-top: -1em;
+    margin-left: -3em;
+    font-size: 0.75em;
+
+}
+
+.LabelInput {
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    width: max-content;
+    cursor: text;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
+
+#cursorPuntero {
+    cursor: pointer;
+}
+
+#nombreUsuario {
+    text-align: center;
+    min-width: 1em;
+    max-width: content;
+}
+
+#contieneUsuario {
+    top: 0.85em;
+
+    margin-top: 1%;
+    margin-left: 3%;
+    position: absolute;
+    background-color: var(--fondoForm);
+    border-radius: 15px;
+    height: 1.8em;
+    width: auto;
+    padding: 0.4em;
+    padding-top: 0.2em;
+}
+
+button:focus,
+input:focus,
+input,
+button {
+    outline: 0px !important;
+}
+
+.Editar,
+.Borrar {
+    background: none;
+    border: none;
+}
+
+.Borrar {
+    margin-left: 0.8em;
+
+    margin-top: -0.2em;
+}
